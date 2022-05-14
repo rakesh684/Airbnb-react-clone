@@ -5,32 +5,32 @@ import Navbar from './component/Navbar';
 import Hero from './component/Hero';
 import Footer from './component/Footer'
 import Contacts from './component/Contacts'
+import data from './data';
 
 function App() {
+  const cards=data.map(item=>{
+    return(
+      <Card      
+                key={item.id}
+                item={item}
+                // img={item.coverImg}
+                // rating={item.stats.rating}
+                // reviewCount={item.stats.reviewCount}
+                // location={item.location}
+                // title={item.title}
+                // price={item.price}
+                // openSpots={item.openSpots}
+            />
+    )
+  })
   return (
     <div className="App">
-      <Navbar />
+      <Navbar /> 
       <Hero />
-      <div  className='card-sections'>
-      <Card 
-        img={require('./images/airbnb3.png')}
-        p='5.0 (6) .'
-        h1='Life lessons with Katie Zaferes'
-        h2='From $136 / person'
-      />
-      <Card 
-        img={require('./images/airbnb4.jpg')}
-        p='5.0 (6) .'
-        h1='Learn wedding photography'
-        h2='From $150 / person'
-      />
-      <Card 
-        img={require('./images/airbnb5.jpg')}
-        p='4.5 (10) .'
-        h1='Group Mountain Biking'
-        h2='From $90 / person'
-      />
-      </div>
+      <section className='card-list'>
+      {cards}
+      </section>
+      
       <div className='contacts'>
       <Contacts 
          img={require('./images/cat1.jpg')}

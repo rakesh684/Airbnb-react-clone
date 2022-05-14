@@ -1,5 +1,5 @@
 import React from 'react';
-// import img1 from '../images/cat1.jpg'
+import img1 from '../images/cat1.jpg'
 // import img2 from '../images/cat2.jpg'
 // import img3 from '../images/cat3.jpg'
 // import img4 from '../images/cat4.jpg'
@@ -10,7 +10,7 @@ export default function Contacts(props){
 
     return(
            <div className='contact-card'>
-               <img src={props.img} alt=''/>
+               <img src={img1} alt=''/>
                <h3>{props.name}</h3>
                <div className='info-group'>
                     <img src={phone} alt='' />
