@@ -2,7 +2,7 @@ import React from 'react';
 export default function Footer(){
     const date = new Date();
     const hours = date.getHours();
-    let timeofDay;
+    let timeofDay
     if(hours<12){
         timeofDay = "morning"
     }
@@ -13,7 +13,7 @@ export default function Footer(){
     }
     return(
         <div >
-            <h1>Good {timeofDay}!</h1>
+            {/* <h1>Good {timeofDay}!</h1> */}
         </div>
     )
 }
